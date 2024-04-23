@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/main.js"></script>
+    <title>Calcula tu seguro</title>
+</head>
+<body>
+    <div class="contenedor">
+
+        
+        <header>
+            <a href="#"><img src="resources/header/logo-removebg-preview.png" alt="Segucars"></a>
+            <div>
+                <p>AHORRA <strong>HASTA 500$</strong> 
+                <br> EN TU SEGURO DE COCHE</p>
+                <img src="resources/header/cocheheader.png" alt="header">
+            </div>
+        </header>
+        
+        
+        <main>
+            <h1>¡Tu seguro al precio mas bajo! <br>
+                Fácil y sólo en unos cuantos SEGUNDOS</h1>
+
+            <h3>¿Qué tipo de vehículo quiere asegurar?</h3>
+            <section class="tipo">
+                
+                <article>
+                    <button class="opciontipo" onclick="seleccionartipo( 0)">
+                         <img src="./resources/tipo/berlina.png" alt="Berlina">
+                    </button>
+                </article>
+                <article>
+                    <button class="opciontipo" onclick="seleccionartipo( 1)">
+                        <img src="./resources/tipo/SUV.png" alt="Suv">
+                    </button>
+                </article>
+                <article>
+                    <button class="opciontipo" onclick="seleccionartipo( 2)">
+                        <img src="./resources/tipo/todoterreno.png" alt="Todoterreno" >
+                    </button>
+                </article>
+                <article>
+                    <button class="opciontipo" onclick="seleccionartipo( 3)">
+                         <img src="./resources/tipo/deportivo.png" alt="Deportivo">
+                    </button>
+                </article>
+                <article>
+                    <button class="opciontipo" onclick="seleccionartipo( 4)">
+                         <img src="./resources/tipo/furgoneta.png" alt="Furgoneta">
+                    </button>
+                </article>
+            </section>
+            <h3>Selecciona el combustible</h3>
+            <section class="combustible">
+                <article>
+                    <button class="opcioncombustible" onclick="selectcombustible(0)">
+                        <img src="./resources/combustible/gasolina.png" alt="Gasolina">
+                         
+                    </button>
+                </article>
+                <article>
+                    <button class="opcioncombustible" onclick="selectcombustible(1)">
+                         <img src="./resources/combustible/diesel.png" alt="Diesel">
+                    </button>
+                </article>
+                <article>
+                    <button class="opcioncombustible" onclick="selectcombustible(2)">
+                         <img src="./resources/combustible/electrico.png" alt="Eléctrico">
+                    </button>
+                </article>
+            </section>
+            <h3>Selecciona la marca</h3>
+            <section class="marca">
+
+                <article >
+                    <button class="opcionmarca" onclick="selectmarca(0)">
+                         <img src="./resources/marcas/fiat-logo-brand-car-symbol-black-design-italian-automobile-illustration-free-vector.jpg" alt="Fiat">
+                    </button>
+                </article>
+                <article >
+                    <button class="opcionmarca" onclick="selectmarca(1)">
+                          <img src="./resources/marcas/05-logo-mercedesbenza-1933-1024x576.jpg" alt="Mercedes">
+                    </button>
+                </article>
+                <article >
+                    <button class="opcionmarca" onclick="selectmarca(2)">
+                         <img src="./resources/marcas/opel.jpg" alt="Opel">
+                    </button>                 
+                </article>
+                <article >
+                    <button class="opcionmarca" onclick="selectmarca(3)">
+                         <img src="./resources/marcas/bmw.jpg" alt="BMW">
+                    </button>
+                </article>
+                <article >
+                    <button class="opcionmarca" onclick="selectmarca(4)">
+                         <img src="./resources/marcas/volkswagen.jpg" alt="Volkswagen"> 
+                    </button>
+                    
+                </article>
+                <article >
+                    <button class="opcionmarca" onclick="selectmarca(5)">
+                         <img src="./resources/marcas/citroen.jpg" alt="Citroen">
+                    </button>
+                    
+                </article>
+                <article >
+                    <button class="opcionmarca" onclick="selectmarca(6)">
+                         <img src="./resources/marcas/audi.jpg" alt="Audi">
+                    </button>
+                    
+                </article>
+                <article >
+                    <button class="opcionmarca" onclick="selectmarca(7)">
+                         <img src="./resources/marcas/peugeot.jpg" alt="Peugeot">
+                    </button>
+                    
+                </article>
+                <article >
+                    <button class="opcionmarca" onclick="selectmarca(8)">
+                         <img src="./resources/marcas/renault-logo-brand-car-symbol-with-name-black-design-french-automobile-illustration-free-vector.jpg" alt="Renault">
+                    </button>
+                </article>
+                <article >
+                    <button class="opcionmarca" onclick="selectmarca(9)">
+                         <img src="./resources/marcas/jaguar.jpg" alt="Jaguar">
+                    </button>
+                </article>
+                <article >
+                    <button class="opcionmarca" onclick="selectmarca(10)">
+                         <img src="./resources/marcas/porsche.jpg" alt="Porsche">
+                    </button> 
+                </article>
+                <article >
+                    <button class="opcionmarca" onclick="selectmarca(11)">
+                        <img src="./resources/marcas/ford.jpg" alt="Ford">
+                    </button>                 
+                </article>
+                <article >
+                    <button class="opcionmarca" onclick="selectmarca(12)">
+                         <img src="./resources/marcas/seat.jpg" alt="Seat">
+                    </button>
+                </article>
+                <article >
+                    <button class="opcionmarca" onclick="selectmarca(13)">
+                         <img src="./resources/marcas/skoda.jpg" alt="Skoda">
+                    </button>                    
+                </article>
+                <article >
+                    <button class="opcionmarca" onclick="selectmarca(14)">
+                         <img src="./resources/marcas/lamborghini.jpg" alt="Lamborghini">
+                    </button>                   
+                </article>
+                <article >
+                    <button class="opcionmarca" onclick="selectmarca(15)">
+                         <img src="./resources/marcas/Logo-Land-Rover.png" alt="Land rover"> 
+                    </button>
+                </article>
+            </section>
+            <h3>¿Qué cilindrada tiene?</h3>
+            <section class="cilindrada">
+                <article>
+                    <button class="opcioncilindrada" onclick="selectcilindrada(0)">
+                        <p>60CV - 90CV</p>
+                    </button>
+                </article>
+                <article>
+                    <button class="opcioncilindrada" onclick="selectcilindrada(1)">
+                        <p>90CV - 120CV</p>
+                    </button>
+                </article>
+                <article>
+                    <button class="opcioncilindrada" onclick="selectcilindrada(2)">
+                        <p>120CV - 300CV</p>
+                    </button>
+                </article>
+                <article>
+                    <button class="opcioncilindrada" onclick="selectcilindrada(3)">
+                        <p>+300CV</p>
+                    </button>
+                </article>
+            </section>
+            <h3>Fecha de matriculacion</h3>
+            <section class="matricula">
+                <label for="matriculaInput">Ingresa año de matriculación del vehiculo:</label>
+                <input type="text" id="matriculaInput" placeholder="ejem:2004.." > 
+            </section>
+            <h3>Antiguedad del conductor</h3>
+            <section class="antiguedad"> 
+                <label for="antiguedadInput">Ingresa años de experiencia de carnet:</label>
+                <input type="text" id="antiguedadInput" placeholder="ejem:12.." >                
+            </section>
+            <h3>Selecciona la cobertura que prefiera</h3>
+            <section class="cobertura">
+                <article>
+                    <button class="opcioncobertura" onclick="selectcobertura(0)">
+                        <p>Terceros con 100 Kilimetros de cobertura en carretera</p>
+                    </button>
+                </article>
+                <article>
+                    <button class="opcioncobertura" onclick="selectcobertura(1)">
+                        <p>Terceros + lunas y robo con 100 Kilimetros de cobertura en carretera</p>
+                    </button>
+                </article>
+                <article>
+                    <button class="opcioncobertura" onclick="selectcobertura(2)">
+                        <p>Terceros + lunas y robo con cobertura nacinal en carretera</p>
+                    </button>
+                </article>
+                <article>
+                    <button class="opcioncobertura" onclick="selectcobertura(3)">
+                        <p>A todo riesgo</p>
+                    </button>
+                </article>
+            </section>
+            <h3>¿Qué uso le dará al vehículo?</h3>
+            <section class="uso">
+                <article>
+                    <button class="opcionuso" onclick="selectuso(0)">
+                        <p>Ocio</p>
+                    </button>
+                </article>
+                <article>
+                    <button class="opcionuso" onclick="selectuso(1)">
+                        <p>Diario</p>
+                    </button>
+                </article>
+                <article>
+                    <button class="opcionuso" onclick="selectuso(2)">
+                        <p>Laboral</p>
+                    </button>
+                </article>
+            </section>
+            <section>
+                <div id="cargaSeguro" class="loader hidden"></div>
+                <button id="btnSeguro" class="confirmarSeguro" onclick="confirmSeguro()">¡ CALCULA TU SEGURO !</button>
+                <div id="resultado" class="resultfinal"></div>
+            </section>
+            
+            
+
+        </main>
+        <footer>
+            <section>
+
+            </section>
+            <section>
+
+            </section>
+        </footer>
+
+    </div>
+    
+</body>
+</html>
