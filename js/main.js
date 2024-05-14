@@ -1,33 +1,22 @@
 
-// aquí recogemos la pulsacion del tipo de vehiculo para asignarle el 
-//precio mediante un switch
+// aquí recogemos la pulsacion del tipo de vehiculo para asignarle el precio y nombre
+//el argumento valor es el valor que devolvemos con el onclick del HTML
 let precioTipo = null;
+let nombreTipo = null;
 
 
 function seleccionartipo (valor){
-    switch (valor) {
-        case 0 :
-            precioTipo = 100;
-            break;
-        case 1 :
-            precioTipo = 120;
-            break;
-        case 2 :
-            precioTipo = 150;
-            break;
-        case 3 :
-            precioTipo = 200;
-            break;
-        case 4 :
-            precioTipo = 170;
-            break;    
-    }
-    console.log(precioTipo);
+    const arrayTipo = [
+        {nombre: "Berlina" , precio: 100},
+        {nombre: "Suv" , precio: 120},
+        {nombre: "Todoterreno" , precio: 150},
+        {nombre: "Deportivo" , precio: 200},
+        {nombre: "Furgoneta" , precio: 170}
+    ];
+
+    precioTipo = arrayTipo[valor].precio;
+    nombreTipo = arrayTipo[valor].nombre;
 }
-
-
-seleccionartipo ();
-
 
 
 
@@ -36,32 +25,52 @@ seleccionartipo ();
 //if-else para asignarle un precio
 
 let precioCombustible = null;
+let nombreCombustible =null;
 
 function selectcombustible(valor) {
-    if (valor == 0 ) {
-        precioCombustible = 50;
-    } else {
-        if (valor == 1){
-            precioCombustible = 60;
-        } else {
-        
-            precioCombustible = 70;
-        }
-    }
-
-    console.log(precioCombustible);
+    arrayCombustible = [
+        {nombre: "Gasolina", precio: 10 },
+        {nombre:"Diesel" , precio: 15 },
+        {nombre: "Eléctrico", precio: 20 }
+    ];
+    precioCombustible = arrayCombustible[valor].precio;
+    nombreCombustible = arrayCombustible[valor].nombre;
 }
 
-selectcombustible();
+
 
 // recogemos la pulsacion del tipo de marca y le asignamos precio mediante un array
-
 let precioMarca = null;
+let nombreMarca = null;
+
 
 function selectmarca(valor){
-    const arrayMarca =[10,15,20,25,30,35,40,45,50,55,60,65,40,55,20,40];
-precioMarca = arrayMarca[valor]
-console.log(precioMarca);
+    const arrayMarca = [
+        {nombre : "fiat" , precio :10},
+        {nombre : "Mercedes", precio : 15 },
+        {nombre :"Opel" , precio : 20},
+        {nombre : "BMW" , precio : 25},
+        {nombre :"Volkswagen" , precio :30 },
+        {nombre : "Citroen", precio : 35},
+        {nombre : "Audi", precio : 40},
+        {nombre : "Peugeot", precio : 45},
+        {nombre : "Renault", precio : 50},
+        {nombre : "Jaguar", precio : 60},
+        {nombre : "Porsche", precio : 70},
+        {nombre : "Ford", precio : 75},
+        {nombre : "Seat", precio : 80},
+        {nombre : "Skoda", precio : 50},
+        {nombre : "Lamborghini", precio : 100},
+        {nombre : "Land rover", precio : 90}
+
+
+    ];
+  
+
+precioMarca = arrayMarca[valor].precio;
+nombreMarca = arrayMarca[valor].nombre;
+
+
 }
 
 
@@ -70,33 +79,43 @@ console.log(precioMarca);
 //recogemos la pulsacion de cilindrada y le damos precio mediante un array
 
 let precioCilindrada = null ;
+let nombreCilindrada = null;
 
 function selectcilindrada(valor) {
-    const arrayCilindrada =[10,15,20,25,30];
-    precioCilindrada = arrayCilindrada [valor];
-    console.log(precioCilindrada);
+
+
+    const arrayCilindrada =[
+        {nombre: "60CV - 90CV", precio : 20},
+        {nombre: "90CV - 120CV", precio : 30},
+        {nombre: "120CV - 300CV", precio : 40},
+        {nombre: "+300CV", precio : 50},
+    ];
+    precioCilindrada = arrayCilindrada[valor].precio;
+    nombreCilindrada = arrayCilindrada[valor].nombre;
+
 }
 
-selectcilindrada();
+
 
 
 //recogemos la fecha de matriculacion del vehiculo con un input y hacemos logica
 //para asignarle un precio
-// llamamos al elemnto y creamos un listener para recoger la cadena de texo
+// llamamos al elemnto y creamos un listener para recoger la cadena de texto
 //convertimos el texto en numero
 // nos aseguramos que sea un numero con isnan y ejecutamos la logica
 
 let precioMatriculacion = null;
+let textoMatriculacion = null;
 
 document.addEventListener('DOMContentLoaded', function() {
-    let texto = '';
+    textoMatriculacion = '';
     
     const input = document.getElementById('matriculaInput');
     
     input.addEventListener('input', function(event) {
-        texto = event.target.value;
+        textoMatriculacion = event.target.value;
         
-        const matricula = parseFloat(texto);
+        const matricula = parseFloat(textoMatriculacion);
 
         if (!isNaN(matricula)) {
             if (matricula <= 2000){
@@ -112,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log("mal");
         }
 
-        console.log(precioMatriculacion);
+
     });
 });
 
@@ -145,7 +164,7 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log("mal");
         }
 
-        console.log(precioAntiguedad);
+
     });
 });
 
@@ -153,27 +172,40 @@ document.addEventListener('DOMContentLoaded', function() {
 // recogemos la seleccion de la cobertura y le asignamos precio mediante un array
 
 let precioCobertura = null ;
+let nombreCobertura = null;
 
 function selectcobertura(valor) {
-    const arrayCobertura =[30,35,40,45];
-    precioCobertura = arrayCobertura [valor];
-    console.log(precioCobertura);
+    const arrayCobertura =[
+        {cobertura: "Terceros + lunas y robo con 100 Kilimetros de cobertura en carretera" , precio:30},
+        {cobertura: "Terceros + lunas y robo con 100 Kilimetros de cobertura en carretera" , precio:35},
+        {cobertura: "Terceros + lunas y robo con cobertura nacinal en carretera" , precio:40},
+        {cobertura: "A todo riesgo" , precio:45}
+    ];
+    precioCobertura = arrayCobertura [valor].precio;
+    nombreCobertura = arrayCobertura [valor].cobertura;
+
 }
 
-selectcobertura();
 
 
 // recogemos la seleccion de la uso y le asignamos precio mediante un array
 
 let precioUso = null ;
+let nombreUso = null;
 
 function selectuso(valor) {
-    const arrayUso =[30,35,40];
-    precioUso = arrayUso [valor];
-    console.log(precioUso);
+    const arrayUso =[
+        {uso: "Ocio" , precio :30},
+        {uso: "Diario" , precio :35},
+        {uso: "Laboral" , precio :40}
+
+    ];
+    precioUso = arrayUso [valor].precio;
+    nombreUso = arrayUso [valor].uso;
+
 }
 
-selectuso();
+
 
 
 // calculamos precio final poniendo animacion de carga y luego
@@ -187,8 +219,21 @@ function confirmSeguro(){
     precioCombustible + precioMarca + 
     precioMatriculacion + precioTipo;
 
-    console.log(precioTotal);
-    if ((precioTotal>0)) {
+    let arrayDescripcion = [nombreTipo,nombreCombustible,nombreMarca,nombreCilindrada,nombreCobertura,nombreUso];
+    let arrayTotal = [precioTipo,precioCombustible,precioMarca,precioMarca,precioCilindrada,precioMatriculacion,precioAntiguedad,precioCobertura,precioUso];
+    
+    function sonTodosMayoresQueCero(arrayTotal) {
+        for (let i = 0; i < arrayTotal.length; i++) {
+            if (arrayTotal[i] <= 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+  
+ 
+    if (sonTodosMayoresQueCero(arrayTotal)) {
         let respuesta = window.confirm("¿Estás seguro de continuar?");
         if (respuesta) {
         // El usuario hizo clic en "Aceptar"
@@ -204,8 +249,18 @@ function confirmSeguro(){
         
         // Mostrar el contenido
         document.getElementById("resultado").style.display = "block";
-        document.getElementById("resultado").textContent = "El precio final es: " + precioTotal + " $";
-        }, 3000); // 3000 milisegundos = 3 segundos
+        document.getElementById("resultado").textContent = "El precio final es: " + precioTotal + " $" + " y su seleccion es :";
+        //mostrar la seleccion del usuario
+        let card = document.getElementById("resultado");
+  
+        let ul = document.createElement("ul");
+        arrayDescripcion.forEach(function(elemento){
+            let li = document.createElement("li");
+            li.textContent = elemento;
+            ul.appendChild(li);   
+        });
+        card.appendChild(ul);
+        }, 2000); // 3000 milisegundos = 3 segundos
 
         } else {
         // El usuario hizo clic en "Cancelar"
@@ -217,6 +272,8 @@ function confirmSeguro(){
     }
    
 }
+
+
 
 
 
