@@ -214,7 +214,6 @@ function selectuso(valor) {
 //precio final calculado
 
 let precioTotal = null;
-let seleccionId = 1;
 
 function confirmSeguro(){
     precioTotal = precioUso + precioAntiguedad 
@@ -264,15 +263,9 @@ function confirmSeguro(){
                 // Mostrar el contenido
                 document.getElementById("resultado").style.display = "block";
                 
-                    // Guardar en localStorage
-                    localStorage.setItem("seleccion_" + seleccionId, JSON.stringify({
-                        precioTotal: precioTotal,
-                        arrayDescripcion: arrayDescripcion
-                    }));
-
-                    mostrarSelecciones();
-
-                    seleccionId++;
+                // Guardar en localStorage
+                localStorage.setItem("precioTotal", precioTotal);
+                localStorage.setItem("arrayDescripcion", JSON.stringify(arrayDescripcion));
 
 
                 //mostrar la seleccion del usuario
@@ -280,38 +273,26 @@ function confirmSeguro(){
                 
                 let card = document.getElementById("listas");
     
-                function mostrarSelecciones() {
-                    let card = document.getElementById("listas");
-                    card.innerHTML = ""; // Limpiamos el contenido anterior
-                
-                    for (let i = 1; i <= seleccionId; i++) {
-                        let seleccion = JSON.parse(localStorage.getItem("seleccion_" + i));
-                
-                        if (seleccion) {
-                            let articulo = document.createElement("article");
-                            card.appendChild(articulo);
-                            let parrafo = document.createElement("p");
-                            parrafo.textContent = "El precio final es: " + seleccion.precioTotal + " $" + " y su seleccion es :";
-                            articulo.appendChild(parrafo);
-                
-                            let ul = document.createElement("ul");
-                            seleccion.arrayDescripcion.forEach(function (elemento) {
-                                let li = document.createElement("li");
-                                li.textContent = elemento;
-                                ul.appendChild(li);
-                            });
-                            articulo.appendChild(ul);
-                            let boton = document.createElement("button");
-                            boton.textContent = "Borrar seleccion";
-                            articulo.appendChild(boton);
-                            boton.addEventListener("click", function() {
-                                localStorage.removeItem("seleccion_" + i);
-                                mostrarSelecciones();
-                            });
-                        }
-                    }
+                function mostrarSeleccion(){
+
+                    let articulo = document.createElement("article");
+                    card.appendChild(articulo);
+                    let parrafo = document.createElement("p");
+                    parrafo.textContent = "El precio final es: " + precioTotal + " $" + " y su seleccion es :";
+                    articulo.appendChild(parrafo);
+     
+                    
+                    let ul = document.createElement("ul");
+                    arrayDescripcion.forEach(function(elemento){
+                        let li = document.createElement("li");
+                        li.textContent = elemento;
+                        ul.appendChild(li);   
+                    });
+                    articulo.appendChild(ul);
+                    
                 }
-                
+
+                mostrarSeleccion();  
 
                 }, 2000); // 3000 milisegundos = 3 segundos
         

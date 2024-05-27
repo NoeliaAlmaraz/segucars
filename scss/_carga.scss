@@ -33,3 +33,28 @@
     color: #fff;
     border-radius: 10px;
   }
+
+  #listas {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;  
+    flex-wrap: wrap;
+    gap: 20px;
+    article{
+      margin: 0 auto;
+      max-width: 30%;
+      font-size: xx-large;
+      background-color: #0e8e1f;
+      color: #fff;
+      border-radius: 10px;
+
+      ul {
+        list-style: none;
+      }
+      button {
+        border-radius: 10px;
+      }
+    }  
+
+  }

@@ -150,4 +150,27 @@ header div p strong {
   border-radius: 10px;
 }
 
+#listas {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+#listas article {
+  margin: 0 auto;
+  max-width: 30%;
+  font-size: xx-large;
+  background-color: #0e8e1f;
+  color: #fff;
+  border-radius: 10px;
+}
+#listas article ul {
+  list-style: none;
+}
+#listas article button {
+  border-radius: 10px;
+}
+
 /*# sourceMappingURL=style.css.map */
