@@ -1,10 +1,17 @@
---PROYECTO CURSO JAVA SCRIPT--
+# PROYECTO DE CALCULO DE PRECIOS DE SEGURO DE VEHICULO
+Este es un proyecto que calcula el precio de un seguro de vehículo según diversas opciones seleccionadas por el usuario. El cálculo se realiza en base a distintos factores como el tipo de vehículo, combustible, marca, cilindrada, fecha de matriculación, antigüedad del vehículo, cobertura y uso del mismo.
 
-Éste proyecto se basa en una calculadora de seguros, he implementado los arrays, switch, if/else haciendo llamadas al HTML.
-También he implementado los alert y mensajes en página para errores y confirmaciones de formulario.
+## Almacenamiento de Selecciones
+Las selecciones del usuario y sus precios totales se almacenan en el localStorage del navegador para poder ser recuperados y mostrados al usuario en futuras sesiones.
 
-Lo siguiente que quiero hacer con este proyecto es hacer que se me queden seleccionados los elementos que clico pero la única forma que se me ocurre se haría el código muy largo.
+## Interfaz de Usuario
+La interfaz de usuario presenta una serie de campos y botones que permiten al usuario realizar sus selecciones. Se utiliza la librería SweetAlert para mostrar mensajes de confirmación y errores de manera amigable.
 
-Espero su respuesta y todos los consejos que puedan para optimizar el código. 
+## Cálculo del Precio
+El cálculo del precio se realiza en función de los factores seleccionados por el usuario. El precio total se calcula sumando los precios de los factores seleccionados. El precio total se muestra en la pantalla de resultados.
 
-Muchas gracias!!
+## Validación de Datos
+El cálculo del precio se realiza en función de los datos ingresados por el usuario. Se utiliza la librería SweetAlert para mostrar mensajes de errores de manera amigable.
+
+## Nota Importante
+Es importante seleccionar todas las opciones requeridas antes de confirmar el seguro. Si alguna opción queda sin marcar, se mostrará un mensaje de error solicitando al usuario que complete todas las selecciones.
